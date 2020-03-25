@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 3000;
     ImageView image;
     TextView logo;
 
@@ -32,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(MainActivity.this,Welcome_screen.class);
 
-                Pair[] pairs = new Pair[2];
+                Pair[] pairs = new Pair[1];
                 pairs[0] = new Pair<View,String>(image,"logo_image");
-                pairs[1] = new Pair<View,String>(image,"logo_text");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pairs);
                 startActivity(intent,options.toBundle());
             }

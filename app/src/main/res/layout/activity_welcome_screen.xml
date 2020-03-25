@@ -6,20 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".Welcome_screen"
     android:orientation="vertical"
-    android:background="#ffffff">
-    
+    android:background="@color/white"
+    android:gravity="center">
+
     <ImageView
         android:id="@+id/logoImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
         android:src="@drawable/care"
-        android:transitionName="logo_image"/>
+        android:transitionName="logo_image" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="350dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.viewpager.widget.ViewPager>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/dotscontainer"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"/>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:textSize="40sp"
-        android:transitionName="logo_text"/>
+        android:text="LOG IN"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        />
+    <TextView android:id="@+id/link_signup"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do not have an account? Sign Up."
+        android:gravity="center"
+        android:textSize="16dip"/>
+
 
 </LinearLayout>
